@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <main class="app">
+        <form class="search" id="search">
+            <input id="city" placeholder="Enter city name...">
+            <button>Search</button>
+        </form>
+        <p class="error" id="error"></p>
+        <div class="panels">
+            <section class="glass now">
+                <p class="place" id="place">Loading...</p>
+                <div class="main">
+                    <div>
+                        <h1 id="temp">--°</h1>
+                        <p class="desc" id="desc">--</p>
+                    </div>
+                    <span class="icon big part" id="icon"></span>
+                </div>
+                <div class="stats">
+                    <div>
+                        <span>Feels like</span>
+                        <b id="feels-like">--°</b>
+                    </div>
+                    <div>
+                        <span>Humidity</span>
+                        <b id="humidity">--%</b>
+                    </div>
+                    <div>
+                        <span>Wind</span>
+                        <b id="wind">-- mph</b>
+                    </div>
+                </div>
+                <div class="hours" id="hours"></div>
+                <p class="updated" id="updated"></p>
+            </section>
+            <section class="glass week">
+                <h2>7-Day Forecast</h2>
+                <div class="days" id="days"></div>
+            </section>
+        </div>
+
+        
+</body>
+</html>
