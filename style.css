@@ -25,3 +25,46 @@ body {
     color: #fff;
 }
 
+.app{
+    width: 100%;
+    max-width: 940px;
+}
+
+.search{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search input{
+    flex: 1;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid var(--edge);
+    border-radius: 25px;
+    background: var(--glass);
+    color: #fff;
+    font: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.search input::placeholder{
+    color: var(--muted);
+}
+
+.search input:focus{
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+.search button{
+    padding: 0 26px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #000000;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
