@@ -1,0 +1,27 @@
+:root{
+    --glass: rgba(255, 255, 255, 0.08);
+    --edge: rgba(255, 255, 255, 0.1);
+    --muted:rgba(255, 255, 255, 0.5);
+    --sun: #fcd34d;
+    --cloud: #e0f2fe;
+    --rain: #3b82f6;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(160deg, #1e3a8a, #2563eb);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
