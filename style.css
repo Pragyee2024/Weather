@@ -150,3 +150,40 @@ h1{
     position: absolute;
     border-radius: 50%;
 }
+
+.big{
+    font-size: 120px;
+}
+
+.sun::before{
+    content: "";
+    inset: 0.2em;
+    background: var(--sun);
+}
+
+.cloud::before, .part::before, .rain::before{
+    content: "";
+    left: 0.3em;
+    top: 0.3em;
+    width: 0.36em;
+    height: 0.36em;
+    background: var(--cloud);
+    box-shadow: .2em .08em 0 -.04em var(--cloud);
+}
+
+.cloud::after, .part::after, .rain::after{
+    content: "";
+    left: 0.14em;
+    top: 0.48em;
+    width: 0.72em;
+    height: 0.22em;
+    border-radius: 0.11em;
+    background: var(--cloud);
+}
+
+.part{
+    background-image: radial-gradient(var(--sun) 60%, #0000 62%);
+    background-size: 0.46em 0.46em;
+    background-position: 0.1em 0.1em;
+    background-repeat: no-repeat;
+}
