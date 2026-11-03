@@ -68,3 +68,33 @@ body {
     cursor: pointer;
     transition: transform 0.15s;
 }
+
+.search button:hover{
+    transform: scale(1.05);
+}
+
+.error{
+    min-height: 22px;
+    padding-left: 20px;
+    color: #fca5a5;
+    font-size: 14px;
+}
+
+.panels{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 18px;
+}
+
+.glass{
+    padding: 26px;
+    border: 1px solid var(--edge);
+    border-radius: 22px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+}
+
+.place{
+    color: var(--muted);
+    font-size: 16px;
+}
