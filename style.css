@@ -131,3 +131,22 @@ h1{
     font-size: 18px;
     font-weight: 600;
 }
+
+.updated{
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.icon{
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex: none;
+}
+
+.icon::before, .icon::after{
+    position: absolute;
+    border-radius: 50%;
+}
