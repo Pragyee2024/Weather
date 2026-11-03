@@ -187,3 +187,19 @@ h1{
     background-position: 0.1em 0.1em;
     background-repeat: no-repeat;
 }
+
+.rain{
+    --drop: linear-gradient(var(--rain), var(--rain));
+    background-image: var(--drop), var(--drop), var(--drop);
+    background-size: 0.05em 0.16em;
+    background-position: 0.34em 0.76em, 0.48em 0.76em, 0.62em 0.76em;
+    background-repeat: no-repeat;
+}
+
+.rain::before{
+    top: 0.18em;
+}
+
+.rain::after{
+    top: 0.36em;
+}
