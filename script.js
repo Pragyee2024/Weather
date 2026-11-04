@@ -45,3 +45,36 @@ const CODES = {
 function look(code) {
     return CODES[code] || ["Cloudy", "cloud"];
 }
+
+sync function findCity(city) {
+    const url = GEO + "?name=" + encodeURIComponent(city);
+    const response = await fetch(url);
+    const data = await response.json();
+    if(!data.results || data.results.length === 0) {
+        throw new Error("City not found");
+    }
+    return data.results[0];
+}
+
+async function getWeather(city) {
+    const params = new URLSearchParams({
+        latitude: city.latitude,
+        longitude: city.longitude,
+        current: [
+            "temperature_2m", "relative_humidity_2m", "apparent_temperature", "weather_code", "wind_speed_10m"
+        ].join(","),
+        hourly: "temperature_2m,weather_code",
+        daily: [
+            "weather_code", "temperature_2m_max", "temperature_2m_min"
+        ].join(","),
+        forecast_days: 7,
+        timezone: "auto"
+    });
+
+    const response = await fetch(API + "?" + params);
+    return response.json();
+
+}
+
+const round = n => Math.round(n) + "°C";
+const iconOf = t => '<span class="icon ' + t + '"></span>';
