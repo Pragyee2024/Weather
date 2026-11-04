@@ -18,26 +18,29 @@ const REFRESH = 10 * 60 * 1000; // 10 minutes
 const DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let current = null;
 
-const CODES ={
+const CODES = {
     0: ["Clear sky", "sun"],
     1: ["Mainly clear", "part"],
     2: ["Partly cloudy", "part"],
     3: ["Overcast", "cloud"],
-    45: ["Fog", "fog"],
+    45: ["Fog", "cloud"],
+    48: ["Fog", "cloud"],
     51: ["Light drizzle", "rain"],
+    53: ["Drizzle", "rain"],
+    55: ["Heavy drizzle", "rain"],
     61: ["Light rain", "rain"],
     63: ["Moderate rain", "rain"],
     65: ["Heavy rain", "rain"],
-    71: ["Light snow", "snow"],
-    73: ["Moderate snow", "snow"],
-    75: ["Heavy snow", "snow"],
+    71: ["Light snow", "cloud"],
+    73: ["Moderate snow", "cloud"],
+    75: ["Heavy snow", "cloud"],
     80: ["Rain showers", "rain"],
     81: ["Rain showers", "rain"],
     82: ["Rain showers", "rain"],
-    95: ["Thunderstorm", "storm"],
-    96: ["Thunderstorm with hail", "storm"],
-    99: ["Thunderstorm with hail", "storm"]
-}
+    95: ["Thunderstorm", "rain"],
+    96: ["Thunderstorm with hail", "rain"],
+    99: ["Thunderstorm with hail", "rain"]
+};
 
 function look(code) {
     return CODES[code] || ["Cloudy", "cloud"];
