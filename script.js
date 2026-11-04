@@ -97,3 +97,36 @@ function showNow(city, data){
     humidity.textContent = now.relative_humidity_2m + "%";
     wind.textContent = Math.round(now.wind_speed_10m) + " km/h";
 }
+
+function showHours(data){
+    const h = data.hourly;
+    const hour = data.current.time.slice(0, 13);
+    const start = h.time.findIndex(t => t.startsWith(hour));
+    hours.innerHTML = "";
+    for (let i = start; i < start + 6; i++) {
+        const label = i === start ? "Now" : h.time[i].slice(11);
+        const type = look(h.weather_code[i])[1];
+        hours.append(item("hour", [
+            "<span>" + label + "</span>",
+            iconOf(type),
+            "<b>" + round(h.temperature_2m[i]) + "</b>"
+        ]));
+    }
+}
+
+
+function showDays(data){
+    const d = data.daily;
+    days.innerHTML = "";
+    d.time.forEach((date, i) => {
+        const day = new Date(date + "T12:00").getDay();
+        const name = i === 0 ? "Today" : DAY[day];
+        const type = look(d.weather_code[i])[1];
+        days.append(item("day", [
+            "<span>" + name + "</span>",
+            iconOf(type),
+            "<b>" + round(d.temperature_2m_max[i]) + "</b>",
+            "<span>" + round(d.temperature_2m_min[i]) + "</span>"
+        ]));
+    });
+}
