@@ -12,3 +12,8 @@ const updated = document.querySelector("#updated");
 const hours = document.querySelector("#hours");
 const days = document.querySelector("#days");
 
+const GEO = "https://geocoding-api.open-meteo.com/v1/search";
+const API = "https://api.open-meteo.com/v1/forecast";
+const REFRESH = 10 * 60 * 1000; // 10 minutes
+const DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let current = null;
