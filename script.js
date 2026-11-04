@@ -78,3 +78,22 @@ async function getWeather(city) {
 
 const round = n => Math.round(n) + "°C";
 const iconOf = t => '<span class="icon ' + t + '"></span>';
+
+function item(cls,parts){
+    const div = document.createElement("div");
+    div.className = cls;
+    div.innerHTML = parts.join("");
+    return div;
+}
+
+function showNow(city, data){
+    const now = data.current;
+    const [text, type] = look(now.weather_code);
+    place.textContent = city.name + ", " + city.country_code;
+    temp.textContent = round(now.temperature_2m);
+    desc.textContent = text;
+    icon.className = "icon big " + type;
+    feelsLike.textContent = round(now.apparent_temperature);
+    humidity.textContent = now.relative_humidity_2m + "%";
+    wind.textContent = Math.round(now.wind_speed_10m) + " km/h";
+}
