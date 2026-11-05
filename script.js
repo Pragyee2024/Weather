@@ -46,7 +46,7 @@ function look(code) {
     return CODES[code] || ["Cloudy", "cloud"];
 }
 
-sync function findCity(city) {
+async function findCity(city) {
     const url = GEO + "?name=" + encodeURIComponent(city);
     const response = await fetch(url);
     const data = await response.json();
@@ -130,6 +130,7 @@ function showDays(data){
         ]));
     });
 }
+
 
 async function load(name){
     error.textContent = "";
