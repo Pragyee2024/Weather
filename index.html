@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="app">
         <form class="search" id="search">
             <input id="city" placeholder="Enter city name...">
-            <button>Search</button>
+            <button type="submit">Search</button>
         </form>
         <p class="error" id="error"></p>
         <div class="panels">
@@ -33,7 +35,7 @@
                     </div>
                     <div>
                         <span>Wind</span>
-                        <b id="wind">-- mph</b>
+                        <b id="wind">-- km/h</b>
                     </div>
                 </div>
                 <div class="hours" id="hours"></div>
@@ -44,7 +46,7 @@
                 <div class="days" id="days"></div>
             </section>
         </div>
-
-        
+    </main>
+    <script src="script.js"></script>    
 </body>
 </html>
