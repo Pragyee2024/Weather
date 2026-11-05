@@ -130,3 +130,35 @@ function showDays(data){
         ]));
     });
 }
+
+async function load(name){
+    error.textContent = "";
+    try {
+        const city = await findCity(name);
+        const data = await getWeather(city);
+        current = city.name;
+        showNow(city, data);
+        showHours(data);
+        showDays(data);
+        const time = new Date().toTimeString().slice(0, 5);
+        updated.textContent = "Updated at " + time + " (refreshes every 10 minutes)";
+        localStorage.setItem("city", city.name);
+    }  catch (err) {
+        error.textContent = err.message;
+    }
+}
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = input.value.trim();
+    if (name) load(name);
+    input.value = "";
+});
+
+function refresh() {
+    if (current) load(current);
+}
+
+setInterval(refresh, REFRESH);
+
+load(localStorage.getItem("city") || "New York");
