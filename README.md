@@ -38,3 +38,9 @@ cd Weather
 ```
 
 Open `index.html` in your browser. No build step or API key needed.
+
+## ⚙️ How It Works
+
+1. 📍 The city name is converted to coordinates using the Open-Meteo Geocoding API.
+2. 📡 Coordinates are sent to the Open-Meteo Forecast API for current, hourly and daily data.
+3. 🌦️ Weather codes are mapped to CSS icons (sun, partly cloudy, cloud, rain).
