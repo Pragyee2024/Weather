@@ -19,3 +19,22 @@ A responsive weather app built with HTML, CSS and vanilla JavaScript. Search any
 - 🎨 CSS3 (Grid, Flexbox, glassmorphism)
 - ⚡ JavaScript (ES6, Fetch API)
 - 🌐 [Open-Meteo API](https://open-meteo.com/) (no API key required)
+
+
+## 📁 Project Structure
+
+```
+Weather/
+├── index.html
+├── style.css
+└── script.js
+```
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/Pragyee2024/Weather.git
+cd Weather
+```
+
+Open `index.html` in your browser. No build step or API key needed.
