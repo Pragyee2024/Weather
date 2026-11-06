@@ -1,3 +1,21 @@
-# Weather
+# 🌤️Weather
 
 A responsive weather app built with HTML, CSS and vanilla JavaScript. Search any city to see current conditions, the next 6 hours and a 7-day forecast.
+
+## ✨ Features
+
+- 🔍 Search any city worldwide
+- 🌡️ Current temperature, feels-like, humidity and wind speed
+- ⏰ Hourly forecast for the next 6 hours
+- 📅 7-day forecast with daily high and low
+- ☀️ Weather icons drawn in pure CSS (no images)
+- 🔄 Auto-refreshes every 10 minutes
+- 💾 Remembers the last searched city
+- 📱 Responsive layout for mobile and desktop
+
+## 🛠️ Tech Stack
+
+- 🧱 HTML5
+- 🎨 CSS3 (Grid, Flexbox, glassmorphism)
+- ⚡ JavaScript (ES6, Fetch API)
+- 🌐 [Open-Meteo API](https://open-meteo.com/) (no API key required)
